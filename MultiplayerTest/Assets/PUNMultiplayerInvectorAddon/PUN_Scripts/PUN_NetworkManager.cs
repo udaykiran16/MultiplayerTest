@@ -453,6 +453,7 @@ public class PUN_NetworkManager : MonoBehaviourPunCallbacks
         if (_playerPrefab != null)
         {
             PhotonNetwork.Instantiate(_playerPrefab.name, _spawnPoint.position, _spawnPoint.rotation, 0);
+            Debug.Log("player spawned");
         }
         _customNetworkEvents._roomEvents._onJoinedRoom.Invoke();
         base.OnJoinedRoom();
